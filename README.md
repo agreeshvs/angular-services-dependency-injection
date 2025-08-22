@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
 
+Angular Services Dependency Injection is an Angular application that demonstrates the use of services and dependency injection within an Angular project. The application features a modular structure with components such as header, admin, home, sidebar, and hero. It includes a custom service, SubscribeService, which encapsulates subscription logic and can be used for handling user interactions like subscribing to updates.
+
+Key features:
+
+Modular Angular architecture with reusable components.
+Demonstrates dependency injection by using services in components.
+Example service for handling user subscriptions.
+Follows Angular best practices for structure and maintainability.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
