@@ -21,7 +21,6 @@ export class AdminComponent {
   createUser(){
     this.userList = false;
     this.userService.createUser(this.name, this.gender, this.subType, this.status);
-    console.log(this.userService.getAllUsers());
     this.userList = true;
   }
 }

@@ -12,6 +12,7 @@ import { SidebarComponent } from './header/home/sidebar/sidebar.component';
 import { FormsModule } from '@angular/forms';
 import { SubscribeService } from './Services/subscribe.service';
 import { UserService } from './Services/user.service';
+import { LoggerService } from './Services/logger.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { UserService } from './Services/user.service';
     BrowserModule,
     FormsModule
   ],
-  providers: [SubscribeService, UserService], // Providing service at module level
+  providers: [SubscribeService, UserService, LoggerService], // Providing service at module level
   bootstrap: [AppComponent]
 })
 export class AppModule { }
