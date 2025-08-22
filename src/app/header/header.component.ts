@@ -8,7 +8,7 @@ import { SubscribeService } from '../Services/subscribe.service';
   // providers: [SubscribeService] // 2. What to provide
 })
 export class HeaderComponent {
-  selectedTab: string = 'home';
+  selectedTab: string = 'admin';
 
   // 1. How to provide a service to a component
   constructor(private subService: SubscribeService) { }
