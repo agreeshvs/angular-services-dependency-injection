@@ -4,10 +4,15 @@ import { SubscribeService } from '../Services/subscribe.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  providers: [SubscribeService] // 2. What to provide
 })
 export class HeaderComponent {
   selectedTab: string = 'home';
+
+  // 1. How to provide a service to a component
+  constructor(private subService: SubscribeService) { }
+
 
   //When HOME Link is clicked
   HomeClicked(){
@@ -25,7 +30,10 @@ export class HeaderComponent {
     // send email to user, etc.
     // alert('Subscribed successfully!');
 
-    let subscriveService = new SubscribeService();
-    subscriveService.onSubscribeClicked();
+    /* let subscriveService = new SubscribeService();
+    subscriveService.onSubscribeClicked(); */
+
+    // 3. How to use the service
+    this.subService.onSubscribeClicked('header component');
   }
 }
