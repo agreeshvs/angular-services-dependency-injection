@@ -11,6 +11,7 @@ import { HeroComponent } from './header/home/hero/hero.component';
 import { SidebarComponent } from './header/home/sidebar/sidebar.component';
 import { FormsModule } from '@angular/forms';
 import { SubscribeService } from './Services/subscribe.service';
+import { UserService } from './Services/user.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { SubscribeService } from './Services/subscribe.service';
     BrowserModule,
     FormsModule
   ],
-  providers: [SubscribeService], // Providing service at module level
+  providers: [SubscribeService, UserService], // Providing service at module level
   bootstrap: [AppComponent]
 })
 export class AppModule { }
