@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SubscribeService } from 'src/app/Services/subscribe.service';
 
 @Component({
@@ -8,7 +8,9 @@ import { SubscribeService } from 'src/app/Services/subscribe.service';
   // providers: [SubscribeService]
 })
 export class HeroComponent {
-  constructor(private subSubscribe: SubscribeService) { }
+  // constructor(private subSubscribe: SubscribeService) { }
+
+  subSubscribe = inject(SubscribeService);
   OnSubscribe(){
     // Logic for subscription can be added here
     // database call, API call, etc.
@@ -17,6 +19,7 @@ export class HeroComponent {
     /* let subscriveService = new SubscribeService();
     subscriveService.onSubscribeClicked('hero component'); */
 
+  
     this.subSubscribe.onSubscribeClicked('hero component');
   }
 }
