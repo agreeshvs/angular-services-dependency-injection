@@ -5,7 +5,7 @@ import { SubscribeService } from '../Services/subscribe.service';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  providers: [SubscribeService] // 2. What to provide
+  // providers: [SubscribeService] // 2. What to provide
 })
 export class HeaderComponent {
   selectedTab: string = 'home';

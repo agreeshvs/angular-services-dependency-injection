@@ -10,6 +10,7 @@ import { UserListComponent } from './header/admin/user-list/user-list.component'
 import { HeroComponent } from './header/home/hero/hero.component';
 import { SidebarComponent } from './header/home/sidebar/sidebar.component';
 import { FormsModule } from '@angular/forms';
+import { SubscribeService } from './Services/subscribe.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SubscribeService], // Providing service at module level
   bootstrap: [AppComponent]
 })
 export class AppModule { }
